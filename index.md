@@ -1,12 +1,12 @@
 ## RapCAD
 
-#Introduction
+### Introduction
 
 RapCAD is an integrated development environment that allows for the creation of rapid prototype models using RepRap 3D printing machines. Unlike most CAD packages, RapCAD is not GUI based. One of the benefits of this is that it allows for designs to be described with a modular scene description language, providing compatibility with traditional text-based source control management software. This also allows for the creation of re-usable component modules that can be distributed as a design library.
 
 Often the way traditional CAD packages are used is by creating temporary construction lines that are either deleted or put on an invisible layer. From a collaborator's perspective, it’s not always obvious how the final design was constructed. Using traditional source control management allows the transcript of decisions made during the design process to be recorded.
 
-#Key Features and Benefits
+### Key Features and Benefits
 
 - **Arbitrary precision arithmetic**: RapCAD uses arbitrary precision arithmetic, powered by the GMP and MPFR libraries, to perform calculations with very high precision. All calculations in the scene description script are made using precision arithmetic, and conversion to floating point precision is only done at the final output stage, which is either when the model is rendered and displayed using OpenGL, or the model is exported to file. This is important for certain types of modeling and design work, as it allows users to create more accurate models and handle complex geometric shapes.
 
