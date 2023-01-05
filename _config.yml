@@ -2,3 +2,4 @@ theme: jekyll-theme-minimal
 title: "RapCAD.org"
 description: "Powerful and flexible 3D design with RapCAD."
 show_downloads: "true"
+rapcad_version: "1.0.2"
