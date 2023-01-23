@@ -11,6 +11,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     {% include head-custom.html %}
+    <style>
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+    #terminal {
+      width: 240px;
+      height: 100px;
+      box-shadow: 0px 0px 10px 2px #333;
+      background-color: #202030;
+      color: white;
+      font-family: monospace;
+      border-radius: 15px;
+      padding: 10px;
+    }
+    #cursor {
+      animation: blink 1s step-end infinite;
+    }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -31,6 +51,7 @@
           <li><a href="//github.com/GilesBathgate/RapCAD/releases/download/v{{site.rapcad_version}}/rapcad_{{site.rapcad_version}}.dmg">Download <strong>Mac DMG</strong></a></li>
           <li><a href="//github.com/GilesBathgate/RapCAD">Fork On <strong>GitHub</strong></a></li>
         </ul>
+        <div id="terminal">$ sudo apt install rapcad <span id="cursor">&#9608;</span></div>
         {% endif %}
       </header>
       <section>
