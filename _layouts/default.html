@@ -26,6 +26,10 @@
       font-family: monospace;
       border-radius: 15px;
       padding: 10px;
+      user-select: none;
+    }
+    #selectable-text {
+      user-select: text;
     }
     #cursor {
       animation: blink 1s step-end infinite;
@@ -51,7 +55,7 @@
           <li><a href="//github.com/GilesBathgate/RapCAD/releases/download/v{{site.rapcad_version}}/rapcad_{{site.rapcad_version}}.dmg">Download <strong>Mac DMG</strong></a></li>
           <li><a href="//github.com/GilesBathgate/RapCAD">Fork On <strong>GitHub</strong></a></li>
         </ul>
-        <div id="terminal">$ sudo apt install rapcad <span id="cursor">&#9608;</span></div>
+        <div id="terminal">$ <span id="selectable-text">sudo apt install rapcad</span> <span id="cursor">&#9608;</span></div>
         {% endif %}
       </header>
       <section>
