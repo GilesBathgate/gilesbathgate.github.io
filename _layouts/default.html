@@ -34,18 +34,52 @@
     #cursor {
       animation: blink 1s step-end infinite;
     }
+    .brand-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .brand-logo img {
+      display: block;
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 0.75rem;
+    }
+
+    .brand-title {
+      margin: 0;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .brand-title a {
+      text-decoration: none;
+    }
+
+    .brand-description {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
     </style>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <div class="brand-container">
+          {% if site.logo %}
+            <a href="{{ "/" | absolute_url }}" class="brand-logo">
+              <img src="{{site.logo | relative_url}}" alt="{{ site.title | default: site.github.repository_name }} Logo" />
+            </a>
+          {% endif %}
+          <h1 class="brand-title">
+            <a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a>
+          </h1>
+        </div>
 
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
-        {% endif %}
-
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <p class="brand-description">{{ site.description | default: site.github.project_tagline }}</p>
 
         <p class="view"><a href="//github.com/GilesBathgate/RapCAD">View the Project on GitHub <small>GilesBathgate/RapCAD</small></a></p>
 

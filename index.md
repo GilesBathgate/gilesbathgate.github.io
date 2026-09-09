@@ -1,6 +1,4 @@
-## RapCAD
-
-### Introduction
+## Introduction
 
 RapCAD is an integrated development environment that allows for the creation of rapid prototype models using RepRap 3D printing machines. Unlike most CAD packages, RapCAD is not GUI based. One of the benefits of this is that it allows for designs to be described with a modular scene description language, providing compatibility with traditional text-based source control management software. This also allows for the creation of re-usable component modules that can be distributed as a design library.
 
